@@ -1,5 +1,10 @@
 # Instructions pour que ça fonctionne, parce que c'est mieux :
 
+# Petite information :
+Le code "$(document).ready(function() {})" dans les fichiers '*.js' est du jQuery.
+Cette fonction permet de lancer les scripts une fois la page chargée, pour ne pas ralentir le chargement.
+Pensez à mettre vos scripts JS entre les '{}' du coup :)
+
 # Installer Node et NPM sur le pc :
 - Télécharger et installer via le lien : https://nodejs.org/en/download/
 - Voir si c'est bien installé en faisant les commandes :
