@@ -10,7 +10,7 @@ Pensez à mettre vos scripts JS entre les '{}' du coup :)
 - Voir si c'est bien installé en faisant les commandes :
     - node -v
     - npm -v
-Si une erreur survient, refaire la première étape
+- Si une erreur survient, refaire la première étape
 
 # Installer Sass dans le dossier 'css'
 - Ouvrir un terminal dans le dossier 'css'
