@@ -1,93 +1,112 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-header #photo {
-  width: 100vw;
-  height: 100vh;
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+header #bg_full {
+  width: 100%;
+  max-width: 1500px;
+  margin: auto;
+  display: block;
+  position: relative;
 }
-header #carouselExampleControls .carousel-item,
-header #carouselExampleControls .carousel-item img {
-  height: 100vh;
-  width: 100vw;
-  object-fit: cover;
+header #bg_full video {
+  width: 100%;
+  height: auto;
+}
+header #bg_full #main_title {
+  font-family: "Montserrat", sans-serif;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding-left: 50px;
+  width: 100%;
+  height: 100%;
+}
+header #bg_full #main_title h1 {
+  font-size: 5rem;
+  -webkit-text-stroke: 3px white;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 10px;
+}
+header #bg_full #main_title h2 {
+  font-size: 2rem;
+  color: white;
+}
+header #bg_full #main_title #btn_scroll, header #bg_full #main_title #btn_scroll::after {
+  width: 250px;
+  height: 46px;
+  font-size: 20px;
+  background: linear-gradient(45deg, transparent 5%, #6ac2f5 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  line-height: 45px;
+  box-shadow: 6px 0px 0px #c4edf0;
+  outline: transparent;
+  position: relative;
+  opacity: 0.8;
+}
+header #bg_full #main_title #btn_scroll::after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  content: "ENTRER";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #31b0fa 5%);
+  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+  clip-path: var(--slice-0);
+}
+header #bg_full #main_title #btn_scroll:hover::after {
+  animation: 1s anim_cyberpunk;
+  animation-timing-function: steps(2, end);
 }
 
-.text_pres {
-  position: absolute;
-  top: 10%;
-  width: 100vw;
+main section {
+  height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
 }
-.text_pres h1 {
-  color: transparent;
-  font-size: 3rem;
-}
-
-main .first_text {
+main section#sec_first .first_text {
   background-color: #000;
   color: #fff;
   font-family: "Montserrat", sans-serif;
-  min-height: 30rem;
+  height: 50vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   text-align: center;
-  padding: 50px 150px;
+  padding: 50px;
 }
-main .first_text .item {
+main section#sec_first .first_text .item {
   width: 23rem;
 }
-main .first_text h1 {
+main section#sec_first .first_text h1 {
   padding: 20px;
 }
-main .wrapper {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-}
-main .wrapper .item {
+main section .img_item {
   width: 100vw;
-  height: 70vh;
+  height: 50vh;
   overflow: hidden;
 }
-main .wrapper .item img {
+main section .img_item img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
-main .wrapper .item:not(:last-child) {
+main section .img_item:not(:last-child) {
   padding: 6px 0;
-}
-main .wrapper .item:first-child {
-  padding-top: 12px;
-}
-main .last_pres {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 30px 100px;
-}
-main .last_pres .item {
-  height: 10rem;
-  width: 17rem;
-  margin: 20px;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 0 12px #a8a8a8;
-}
-main .last_pres .item img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
 }
 
 footer {
@@ -107,6 +126,53 @@ html, body {
   padding: 0;
   margin: 0;
   background-color: #000 !important;
+}
+
+@keyframes anim_cyberpunk {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

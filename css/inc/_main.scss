@@ -1,35 +1,33 @@
 main {
-    .first_text {
-        background-color: #000;
-        color: #fff;
-        font-family: 'Montserrat', sans-serif;
-        min-height: 30rem;
-
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: row;
-        text-align: center;
-        padding: 50px 150px;
-
-        .item {
-            width: 23rem;
-        }
-
-        h1 {
-            padding: 20px;
-        }
-    }
-
-    .wrapper {
+    section {
+        height: 100vh;
         display: flex;
         justify-content: space-around;
         align-items: center;
         flex-direction: column;
 
-        .item {
+        &#sec_first {
+            .first_text {
+                background-color: #000;
+                color: #fff;
+                font-family: 'Montserrat', sans-serif;
+                height: 50vh;
+        
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: row;
+                text-align: center;
+                padding: 50px;
+        
+                .item {width: 23rem}
+                h1 {padding: 20px}
+            }
+        }
+
+        .img_item {
             width: 100vw;
-            height: 70vh;
+            height: 50vh;
             overflow: hidden;
 
             img {
@@ -38,36 +36,7 @@ main {
                 object-fit: cover;
             }
 
-            &:not(:last-child) {
-                padding: 6px 0;
-            }
-            &:first-child {
-                padding-top: 12px;
-            }
-        }
-    }
-
-    .last_pres {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-direction: row;
-        flex-wrap: wrap;
-        padding: 30px 100px;
-
-        .item {
-            height: 10rem;
-            width: 17rem;
-            margin: 20px;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 0 12px #a8a8a8;
-
-            img {
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-            }
-        }
+            &:not(:last-child) {padding: 6px 0}
+        } // Full-width images
     }
 }

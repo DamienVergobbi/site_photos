@@ -1,43 +1,78 @@
-$topSize: 70vh;
 header {
-    #photo {
-        width: 100vw;
-        height: 100vh;
-        background-color: #fff;
+    #bg_full {
+        width:100%; 
+        max-width:1500px; 
+        margin:auto; 
+        display:block; 
+        position: relative;
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #carouselExampleControls {
-
-        .carousel-item,
-        .carousel-item img {
-            height: 100vh;
-            width: 100vw;
-            object-fit: cover;
-            // transition: transform 2s ease-out;
-
-            // &:hover {
-            //     transform: scale(1.2);
-            // }
+        video{
+            width:100%;
+            height:auto 
         }
-    }
-}
 
-.text_pres {
-    position: absolute;
-    top: 10%;
-    width: 100vw;
+        #main_title { 
+            font-family: 'Montserrat', sans-serif;
+            position: absolute; top: 0; left: 0;
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            align-items: left; 
+            padding-left: 50px;
+            width: 100%;
+            height: 100%;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+            h1 {
+                font-size: 5rem;
+                -webkit-text-stroke:3px white;
+                -webkit-text-fill-color:transparent;
+                letter-spacing: 10px;
+            }
 
-    h1 {
-        color: transparent;
-        font-size: 3rem;
+            h2 {
+                font-size: 2rem;
+                color : white;
+            }
+
+            #btn_scroll {
+                width: 250px;
+                height: 46px;
+                font-size: 20px;
+                background: linear-gradient(45deg, transparent 5%, #6ac2f5 5%);
+                border: 0;
+                color: #fff;
+                letter-spacing: 3px;
+                line-height: 45px;
+                box-shadow: 6px 0px 0px #c4edf0;
+                outline: transparent;
+                position: relative;
+                opacity: 0.8;
+
+                &::after {
+                    @extend #btn_scroll;
+                    --slice-0: inset(50% 50% 50% 50%);
+                    --slice-1: inset(80% -6px 0 0);
+                    --slice-2: inset(50% -6px 30% 0);
+                    --slice-3: inset(10% -6px 85% 0);
+                    --slice-4: inset(40% -6px 43% 0);
+                    --slice-5: inset(80% -6px 5% 0);
+                
+                    content: 'ENTRER';
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #31b0fa 5%);
+                    text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+                    clip-path: var(--slice-0);
+                }
+                &:hover::after {
+                    animation: 1s anim_cyberpunk;
+                    animation-timing-function: steps(2, end);
+                }
+            }
+        }
     }
 }
