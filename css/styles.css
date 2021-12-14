@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+header #photo {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header #carouselExampleControls .carousel-item,
+header #carouselExampleControls .carousel-item img {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+}
+
+.text_pres {
+  position: absolute;
+  top: 10%;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.text_pres h1 {
+  color: transparent;
+  font-size: 3rem;
+}
+
+main .first_text {
+  background-color: #000;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  min-height: 30rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+  padding: 50px 150px;
+}
+main .first_text .item {
+  width: 23rem;
+}
+main .first_text h1 {
+  padding: 20px;
+}
+main .wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+main .wrapper .item {
+  width: 100vw;
+  height: 70vh;
+  overflow: hidden;
+}
+main .wrapper .item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+main .wrapper .item:not(:last-child) {
+  padding: 6px 0;
+}
+main .wrapper .item:first-child {
+  padding-top: 12px;
+}
+main .last_pres {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 30px 100px;
+}
+main .last_pres .item {
+  height: 10rem;
+  width: 17rem;
+  margin: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 12px #a8a8a8;
+}
+main .last_pres .item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+footer {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  text-align: center;
+}
+footer p {
+  margin: 0;
+  padding: 6px 0;
+  font-weight: 700;
+  color: #fff;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  background-color: #000 !important;
+}
+
+/*# sourceMappingURL=styles.css.map */

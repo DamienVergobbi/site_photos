@@ -1,0 +1,43 @@
+$topSize: 70vh;
+header {
+    #photo {
+        width: 100vw;
+        height: 100vh;
+        background-color: #fff;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #carouselExampleControls {
+
+        .carousel-item,
+        .carousel-item img {
+            height: 100vh;
+            width: 100vw;
+            object-fit: cover;
+            // transition: transform 2s ease-out;
+
+            // &:hover {
+            //     transform: scale(1.2);
+            // }
+        }
+    }
+}
+
+.text_pres {
+    position: absolute;
+    top: 10%;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+        color: transparent;
+        font-size: 3rem;
+    }
+}

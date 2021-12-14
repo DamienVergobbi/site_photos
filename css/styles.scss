@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@import './inc/header';
+@import './inc/main';
+@import './inc/footer';
+
+html, body {
+    padding: 0;
+    margin: 0;
+    background-color: #000 !important;
+}
