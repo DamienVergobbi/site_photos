@@ -1,4 +1,4 @@
-# Instructions pour que ça fonctionne, parce que c'est mieux :
+# Instructions pour que ça fonctionne, parce que c'est mieux
 
 # Petite information :
 Le code "$(document).ready(function() {})" dans les fichiers '*.js' est du jQuery.
